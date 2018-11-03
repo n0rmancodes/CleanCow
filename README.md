@@ -1,7 +1,8 @@
 # CleanCow
 CleanCow is an extra small computer cleaner for Windows.
 # Credits
-**Norman Rugg -- Lead Programmer**
+ **Lead Programmer** -- **Norman Rugg**
+ **Sound Effects** -- **notifactationsounds.com**
 ## Sources
 - Instructables
 - Stack Overflow
