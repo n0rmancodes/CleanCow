@@ -10,3 +10,4 @@ Clean your PC with ease to milk your storage space.
 - [x] Elapsed Time
 - [ ] Release first version
 - [ ] Add recycle bin emptier
+- [ ] Play sound when finished
