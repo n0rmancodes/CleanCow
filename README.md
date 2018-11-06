@@ -7,6 +7,6 @@ Clean your PC with ease to milk your storage space.
 ## To Do list:
 ### In no particular order.
 - [ ] Clean more stuff
-- [+] Elapsed Time
+- [x] Elapsed Time
 - [ ] Release first version
 - [ ] Add recycle bin emptier
