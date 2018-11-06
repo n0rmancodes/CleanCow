@@ -4,7 +4,7 @@ about: Report a bug that might affect your CleanCow expirience.
 
 ---
 
-**Please check the known pages on the Wiki before posting an issue.**
+**Please check the known issue pages on the Wiki before posting an issue.**
 
 Describe the bug:
 Write a clear description of what happened.
