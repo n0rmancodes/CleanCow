@@ -1,4 +1,4 @@
-# CleanCow - [[Download](https://tinyurl.com/CleanCow)]
+# CleanCow [[Download](https://tinyurl.com/CleanCow)]
 Clean your PC with ease to milk your storage space.
 ## Sources
 - Instructables
