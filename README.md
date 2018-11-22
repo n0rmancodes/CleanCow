@@ -1,9 +1,6 @@
 # CleanCow [[Download](https://tinyurl.com/CleanCow)]
 Clean your PC with ease to milk your storage space.
-## Sources
-- Instructables
-- Stack Overflow
-### System Requirements
+## System Requirements
 - Windows XP or above
 - more than 1 MB of storage
 # Plans
