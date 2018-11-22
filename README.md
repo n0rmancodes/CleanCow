@@ -5,7 +5,7 @@ Clean your PC with ease to milk your storage space.
 - Stack Overflow
 ### System Requirements
 - Windows XP or above
-- >1 MB of storage
+- more than 1 MB of storage
 # Plans
 In no particular order:
 - [x] Clean more stuff
