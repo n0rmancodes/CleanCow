@@ -10,3 +10,6 @@ In no particular order:
 - [x] Release first version
 - [ ] Add recycle bin emptier
 - [ ] Play sound when finished
+###### Sources
+- Instructables
+- Stack Overflow
