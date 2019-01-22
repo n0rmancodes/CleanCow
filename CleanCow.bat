@@ -1,87 +1,57 @@
 @echo off
-title CleanCow -- Clean your PC with ease, milk your storage space.
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA)
+title CleanCow [v1.2]
+echo CleanCow [v1.2]
 echo ============================
 echo Please run in this as Administrator if you aren't already.
-timeout /t 5
+echo The process will start in 5 seconds (or once a key is pressed).
+timeout /t 5 >nul
+cls
+echo Loading... [Starting timer.]
 cls
 set STARTTIME=%TIME%
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
 echo Removing useless files... (*.tmp)
-echo ============================
-del /f /s /q %systemdrive%\*.tmp
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q %systemdrive%\*.tmp >nul
+echo - Successfully removed
 echo Removing useless files... (*._mp)
-echo ============================
-del /f /s /q %systemdrive%\*._mp
+del /f /s /q %systemdrive%\*._mp >nul
 cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+echo - Successfully removed!
 echo Removing useless files... (*.log)
-echo ============================
-del /f /s /q %systemdrive%\*.log
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q %systemdrive%\*.log >nul
 echo Removing useless files... (*.gid)
-echo ============================
-del /f /s /q %systemdrive%\*.gid
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+echo - Successfully removed!
+del /f /s /q %systemdrive%\*.gid >nul
 echo Removing useless files... (*.chk)
-echo ============================
-del /f /s /q %systemdrive%\*.chk
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q %systemdrive%\*.chk >nul
+echo - Successfully removed!
 echo Removing useless files... (*.old)
-echo ============================
-del /f /s /q %systemdrive%\*.old
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q %systemdrive%\*.old >nul
+echo - Successfully removed
 echo Removing useless files... (*.bak)
-echo ============================
-del /f /s /q %windir%\*.bak
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
-echo Removing useless files... (prefetch folder files)
-echo ============================
-del /f /s /q %windir%\prefetch\*.*
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q %windir%\*.bak >nul
+echo - Successfully removed!
+echo Removing prefetch folder files...
+del /f /s /q %windir%\prefetch\*.* >nul
+echo - Successfully removed!
 echo Removing cookies and temporary internet files... (cookies folder)
-echo ============================
-del /f /q %userprofile%\cookies\*.*
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /q %userprofile%\cookies\*.* >nul
+echo - Successfully removed!
 echo Removing cookies and temporary internet files... (recent folder)
-echo ============================
-del /f /q %userprofile%\recent\*.*
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA)
-echo ============================
+del /f /q %userprofile%\recent\*.* >nul
+echo - Successfully removed!
 echo Removing cookies and temporary internet files... (temp internet files)
-echo ============================
-del /f /s /q “%userprofile%\Local Settings\Temporary Internet Files\*.*”
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q “%userprofile%\Local Settings\Temporary Internet Files\*.*” >nul
+echo - Successfully removed!
 echo Removing cookies and temporary internet files... (other temp folders)
-echo ============================
-del /f /s /q “%userprofile%\Local Settings\Temp\*.*”
-cls
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
-echo ============================
+del /f /s /q “%userprofile%\Local Settings\Temp\*.*” >nul
+echo - Successfully removed!
+echo Removing other useless files...
+del /f /s /q “%userprofile%\MicrosoftEdgeBackups\*.*” >nul
+del /f /s /q “%userprofile%\.bash_history” >nul
+del /f /s /q “%userprofile%\.gitconfig” >nul
+del /f /s /q “%userprofile%\.node_repl_history” >nul
+echo - Successfully removed!
 echo Removing useless folders... 
-echo ============================
 rd "Users\%userprofile%\AppData\Local\Temp"
 rd "Windows\Temp"
 rd "Program Files (x86)\Google\CrashReports"
@@ -89,12 +59,11 @@ rd "Users\%userprofile%\AppData\Local\CrashDumps"
 rd "Users\%userprofile%\AppData\Local\CrashRpt\UnsentCrashReports"
 rd "Users\%userprofile%\AppData\Local\D3DSCache"
 rd "Users\%userprofile%\AppData\Local\SquirrelTemp"
-
+echo - Successfully removed!
 set ENDTIME=%TIME%
 for /F "tokens=1-4 delims=:.," %%a in ("%STARTTIME%") do (
        set /A "start=(((%%a*60)+1%%b %% 100)*60+1%%c %% 100)*100+1%%d %% 100"
     )
-
     for /F "tokens=1-4 delims=:.," %%a in ("%ENDTIME%") do (
        set /A "end=(((%%a*60)+1%%b %% 100)*60+1%%c %% 100)*100+1%%d %% 100"
     )
@@ -106,7 +75,7 @@ if %ss% lss 10 set ss=0%ss%
 if %cc% lss 10 set cc=0%cc%
 set DURATION=%hh%:%mm%:%ss%,%cc%
 cls 
-echo CleanCow is an extra small storage space cleaner. (v1.1 BETA) 
+echo CleanCow is an extra small storage space cleaner. (v1.1) 
 echo ============================
 echo Started: %STARTTIME%
 echo Finished: %ENDTIME%
@@ -114,5 +83,6 @@ echo Duration of clean: %DURATION%
 echo Press Enter to exit.
 echo ============================
 echo Credits are found in the official Github.
-pause
+echo This window will close in 20 seconds (or when a key is pressed).
+timeout /t 20 >nul
 end
