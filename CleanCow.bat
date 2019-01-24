@@ -1,10 +1,16 @@
 @echo off
-title CleanCow [v1.2]
-echo CleanCow [v1.2]
+title CleanCow [v1.2.1]
+echo CleanCow [v1.2.1]
 echo ============================
-echo Please run in this as Administrator if you aren't already.
-echo The process will start in 5 seconds (or once a key is pressed).
-timeout /t 5 >nul
+echo Detecting admin privileges...
+net session >nul 2>&1
+    if %errorLevel% == 0 (
+        goto clean
+    ) else (
+        goto admin
+    )
+pause
+:clean
 cls
 echo Loading... [Starting timer.]
 cls
@@ -75,14 +81,23 @@ if %ss% lss 10 set ss=0%ss%
 if %cc% lss 10 set cc=0%cc%
 set DURATION=%hh%:%mm%:%ss%,%cc%
 cls 
-echo CleanCow is an extra small storage space cleaner. (v1.1) 
+echo CleanCow [v1.2.1] 
 echo ============================
 echo Started: %STARTTIME%
 echo Finished: %ENDTIME%
 echo Duration of clean: %DURATION%
 echo Press Enter to exit.
 echo ============================
-echo Credits are found in the official Github.
+echo Coded by n0rmancodes. Additional credits are found in the Github.
 echo This window will close in 20 seconds (or when a key is pressed).
 timeout /t 20 >nul
 end
+:admin
+cls
+title Error (CleanCow [v1.2.1])
+echo CleanCow [v1.2.1]
+echo ============================
+echo Error!
+echo This program requires admin privileges in order to clean most files. Please run this as admin when you relaunch this!
+echo This program will close in 20 seconds.
+timeout /t 20 >nul
