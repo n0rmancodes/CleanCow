@@ -2,7 +2,7 @@
 Clean your PC with ease to milk your storage space.
 ## System Requirements
 - Windows XP or above
-- more than 1 MB of storage
+- 13.8 kB storage to download
 # Plans
 In no particular order:
 - [x] Clean more stuff
