@@ -395,5 +395,5 @@ echo CleanCow [v1.2.2]
 echo ============================
 echo Error!
 echo This program requires admin privileges in order to clean most files. Please run this as admin when you relaunch this!
-echo This program will close in 20 seconds.
+echo This program will close in 20 seconds (or when a key is pressed).
 timeout /t 20 >nul
